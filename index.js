@@ -7,7 +7,7 @@ const fs = require("fs");
     // Go from page 1 to 82
     for (let j = 1; j <= 82; j++) {
       // page number mixed with random string
-      let page = "IM1091";
+      let page = "IM1083";
       if (j > 1) page = page + "_KO" + j;
 
       console.log("fetching page", j, "out of", 4);
@@ -16,7 +16,7 @@ const fs = require("fs");
       const dom = new JSDOM(
         (
           await axios.get(
-            `https://www.glassdoor.co.in/Salaries/bangalore-doctor-salary-SRCH_IL.0,9_${page}.htm`
+            `https://www.glassdoor.co.in/Salaries/new-delhi-wipro-software-engineer-wipro-salary-SRCH_IL.0,9_${page}.htm`
           )
         ).data
       );
